@@ -1,4 +1,3 @@
-// SapAiCoreChatModel.node.ts - Complete implementation with n8n integration
 import {
 	ISupplyDataFunctions,
 	ILoadOptionsFunctions,
@@ -265,9 +264,7 @@ class SapAiCoreChatModel implements INodeType {
 				top_p: options.topP ?? 1,
 				frequency_penalty: options.frequencyPenalty ?? 0,
 				presence_penalty: options.presencePenalty ?? 0,
-				// Add n8n integration features
 				callbacks: [new N8nLlmTracing(this)],
-				// Note: resourceGroup and response_format might be handled differently in SAP AI SDK
 			});
 
 			// Add response format if specified (using proper SAP AI SDK method)

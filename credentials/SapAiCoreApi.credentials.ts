@@ -41,13 +41,9 @@ export class SapAiCoreApi implements ICredentialType {
 			name: 'baseUrl',
 			type: 'string',
 			default: '',
-			placeholder: 'https://api.ai.prod.eu-central-1.aws.ml.hana.ondemand.com',
+			placeholder: 'https://api.ai.sample-region.aws.ml.hana.ondemand.com',
 			required: true,
 			description: 'Base URL for SAP AI Core API',
 		},
 	];
-
-	// No test method = credentials are always considered valid
-	// OAuth2 authentication will be validated when the node actually executes
-	// This is the recommended approach for OAuth2 credentials in n8n
 }

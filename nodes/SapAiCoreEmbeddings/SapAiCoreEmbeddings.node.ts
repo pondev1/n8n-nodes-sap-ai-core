@@ -1,4 +1,3 @@
-// SapAiCoreEmbeddings.node.ts - SAP AI Core embeddings implementation
 import {
 	ISupplyDataFunctions,
 	INodeType,

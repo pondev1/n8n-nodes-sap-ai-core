@@ -3,7 +3,6 @@ import type { Tool } from '@langchain/core/tools';
 
 /**
  * Format a tool for SAP AI Core Function format
- * Similar to OpenAI function format but adapted for SAP AI Core
  */
 export function formatToSapAiCoreFunction(tool: Tool): any {
 	return {

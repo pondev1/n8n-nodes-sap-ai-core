@@ -19,14 +19,9 @@ A custom n8n community node that enables integration with SAP AI Core's LLM mode
 
 ## Installation
 
-### Option 1: Install via n8n Community Nodes (Recommended)
+**⚠️ Important**: This node is designed for **self-hosted n8n** installations only. It cannot be used with n8n Cloud due to dependency requirements.
 
-1. In your n8n instance, go to **Settings** > **Community Nodes**
-2. Click **Install a community node**
-3. Enter the package name: `n8n-nodes-sap-ai-core`
-4. Click **Install**
-
-### Option 2: Manual Installation for Self-Hosted n8n
+### Option 1: npm Installation (Recommended)
 
 1. Navigate to your n8n installation directory
 2. Install the package:
@@ -35,7 +30,7 @@ A custom n8n community node that enables integration with SAP AI Core's LLM mode
    ```
 3. Restart your n8n instance
 
-### Option 3: Development Setup
+### Option 2: Development Setup
 
 1. Clone this repository:
    ```bash

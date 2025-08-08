@@ -1,6 +1,5 @@
 /**
  * UI field descriptions and configurations for SAP AI Core LLM node
- * Based on OpenAI Assistant patterns but adapted for SAP AI Core
  */
 
 export const schemaTypeField = {

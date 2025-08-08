@@ -103,7 +103,6 @@ function callMethodSync(parameters: {
 
 /**
  * Enhanced log wrapper with comprehensive monitoring
- * Based on OpenAI Assistant implementation with SAP AI Core adaptations
  */
 export function logWrapper(
 	originalInstance: any, 

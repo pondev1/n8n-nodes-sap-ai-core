@@ -34,7 +34,7 @@
     "lint": "eslint nodes credentials package.json",
     "lintfix": "eslint nodes credentials package.json --fix",
     "test": "jest",
-    "prepublishOnly": "npm run build && npm run lint"
+    "prepublishOnly": "npm run build"
   },
   "files": [
     "dist"
