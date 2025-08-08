@@ -1,0 +1,83 @@
+{
+  "name": "AI Core Chat Model",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -336,
+        -48
+      ],
+      "id": "a30e5d6f-66b4-4b94-b885-b865ea5deb2a",
+      "name": "When chat message received",
+      "webhookId": "d31fd3b8-558e-43a8-a505-191d7b0c81db"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -128,
+        -48
+      ],
+      "id": "f40de1d9-8519-4519-92f3-3b4308c5b7ae",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "resourceGroup": "default",
+        "options": {}
+      },
+      "type": "CUSTOM.sapAiCoreChatModel",
+      "typeVersion": 1,
+      "position": [
+        -272,
+        160
+      ],
+      "id": "abde19a4-4129-4cef-8e6e-4ccfa816102c",
+      "name": "SAP AI Core Chat Model"
+
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SAP AI Core Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e3b2aa49-c1c9-4a5b-9f19-bcbe07c047ff",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d425a6c2c2e0f777725504bc8771716cfac3780a0251faf43fb52fee871dc404"
+  },
+  "id": "Kd94ADMymTgTnmLH",
+  "tags": []
+}

@@ -1,0 +1,57 @@
+{
+  "name": "AI Core LLM Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -336,
+        -48
+      ],
+      "id": "a30e5d6f-66b4-4b94-b885-b865ea5deb2a",
+      "name": "When chat message received",
+      "webhookId": "d31fd3b8-558e-43a8-a505-191d7b0c81db"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "CUSTOM.sapAiCoreLlm",
+      "typeVersion": 1,
+      "position": [
+        -128,
+        -48
+      ],
+      "id": "8fe47887-fb5a-4e0e-8c80-a29e19daf1a4",
+      "name": "SAP AI Core LLM"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "SAP AI Core LLM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "dd59c9f0-d96a-45a0-81a8-a68f9c21e7d5",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d425a6c2c2e0f777725504bc8771716cfac3780a0251faf43fb52fee871dc404"
+  },
+  "id": "Kd94ADMymTgTnmLH",
+  "tags": []
+}

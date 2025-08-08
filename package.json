@@ -1,0 +1,82 @@
+{
+  "name": "n8n-nodes-sap-ai-core",
+  "version": "1.0.0",
+  "description": "n8n nodes for SAP AI Core LLM and embeddings integration",
+  "keywords": [
+    "n8n-community-node-package",
+    "sap",
+    "ai-core",
+    "llm",
+    "embeddings",
+    "vector",
+    "ai"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/pondev1/n8n-nodes-sap-ai-core",
+  "author": {
+    "name": "Pon Murugesh Devendren",
+    "email": "pon.murugesan.d@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pondev1/n8n-nodes-sap-ai-core.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "npm@9.1.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "clean": "rimraf dist *.tgz",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "test": "jest",
+    "prepublishOnly": "npm run build && npm run lint"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/SapAiCoreApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/SapAiCoreLlm/SapAiCoreLlm.node.js",
+      "dist/nodes/SapAiCoreChatModel/SapAiCoreChatModel.node.js",
+      "dist/nodes/SapAiCoreEmbeddings/SapAiCoreEmbeddings.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^8.29.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "gulp": "^4.0.2",
+    "jest": "^29.0.0",
+    "n8n-workflow": "^1.0.0",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "^1.0.0"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.66",
+    "@langchain/openai": "^0.1.0",
+    "@langchain/textsplitters": "^0.1.0",
+    "@n8n/json-schema-to-zod": "^1.0.0",
+    "@sap-ai-sdk/langchain": "^1.17.0",
+    "generate-schema": "^2.6.0",
+    "langchain": "^0.3.30",
+    "zod": "^3.22.0",
+    "zod-to-json-schema": "^3.22.0"
+  }
+}
