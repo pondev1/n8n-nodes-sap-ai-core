@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-sap-ai-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "n8n nodes for SAP AI Core LLM and embeddings integration",
   "keywords": [
     "n8n-community-node-package",
